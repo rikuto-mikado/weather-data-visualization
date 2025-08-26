@@ -2,7 +2,7 @@ version: '3.8'
 services:
   db:
     image: postgres:15
-    container_name: weather-data-visualization_postgres
+    container_name: postgres
     environment:
       POSTGRES_DB: weather_db
       POSTGRES_USER: admin
@@ -18,7 +18,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:latest
-    container_name: weather-data-visualization_pgadmin
+    container_name: pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: admin
@@ -31,7 +31,7 @@ services:
 
   app:
     build: .
-    container_name: weather-data-visualization_app
+    container_name: webapp
     ports:
       - "8501:8501"
     depends_on:

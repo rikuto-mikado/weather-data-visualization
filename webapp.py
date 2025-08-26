@@ -27,7 +27,7 @@ def load_data():
 
     try:
         # Get the data
-        query = "SELECT date, temperture FROM tempertures ORDER BY created_at"
+        query = "SELECT date, temperature FROM temperatures ORDER BY created_at"
         df = pd.read_sql(query, conn)
 
         dates = df["date"].tolist()
