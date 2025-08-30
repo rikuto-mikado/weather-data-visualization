@@ -1,5 +1,3 @@
-CREATE DATABASE weather_db;
-
 \c weather_db;
 
 CREATE TABLE temperatures (
@@ -9,7 +7,6 @@ CREATE TABLE temperatures (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-/* Insert the data */
 INSERT INTO temperatures (date, temperature) VALUES
 ('22-10-18-15-49-01', 19),
 ('22-10-18-15-49-51', 18),
